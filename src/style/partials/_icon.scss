@@ -7,12 +7,33 @@
 //hover спрайта
 
 
-//.icon {
-//  @include sprite($icon);
+.immob-1{
+  @include sprite($immob-1);
+  &:hover {
+    @include sprite($immob-1-hover);
+  }
+}
+
+.immob-2{
+  @include sprite($immob-2);
+  &:hover {
+    @include sprite($immob-2-hover);
+  }
+}
+//
+//.examples-slid-next{
+//  @include sprite($examples-slid-next);
 //  &:hover {
-//    @include sprite($icon-hover);
+//    @include sprite($examples-slid-next-hover);
 //  }
 //}
+//.examples-slid-prev{
+//  @include sprite($examples-slid-prev);
+//  &:hover {
+//    @include sprite($examples-slid-prev-hover);
+//  }
+//}
+
 //.nav-mobail{
 //  @include sprite($nav-mobail);
 //  &:hover {

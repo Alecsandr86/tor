@@ -4,13 +4,17 @@
 
 //   Font Stacks  НАБОРЫ БАЗОВЫХ ШРИФТОВ bourbon
 
-//font-family: $georgia;
-//font-family: $helvetica;
-//font-family: $lucida-grande;
-//font-family: $monospace;
-//font-family: $verdana;
 
+
+$tahoma: "Tahoma", "Lucida Grande", "Verdana", "Arial", sans-serif;
 
 body{
-  font-family: $helvetica;
+  font-family: $tahoma;
 }
+
+
+@include font-face("pt_sansregular", "../fonts/PT_Sans");
+@include font-face("pt_sansbold", "../fonts/PT_Sans_Bold");
+
+$ff-ptr :"pt_sansregular";
+$ff-ptb :"pt_sansbold";

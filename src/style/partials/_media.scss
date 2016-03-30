@@ -1,0 +1,24 @@
+@media screen and(max-width: 1000px) {
+  .nav-menu{
+    >li{
+      background-color :#53799c;
+      border-bottom :2px solid #e9e8e0;
+      a{
+        color :#fff!important;
+        text-transform :uppercase;
+      }
+      &.rm-parent{
+        a{
+          &:after{
+            display :none;
+          }
+        }
+      }
+    }
+    ul{
+      border-bottom :none!important;
+    }
+  }
+ 
+} 
+
