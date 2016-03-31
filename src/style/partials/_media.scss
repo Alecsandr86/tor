@@ -1,6 +1,16 @@
 @media screen and(max-width: 1000px) {
   .nav-menu{
     >li{
+      a{
+        padding :0;
+      }
+    }
+  }
+ 
+} 
+@media screen and (max-width:991px){
+  .nav-menu{
+    >li{
       background-color :#53799c;
       border-bottom :2px solid #e9e8e0;
       a{
@@ -19,6 +29,4 @@
       border-bottom :none!important;
     }
   }
- 
-} 
-
+}

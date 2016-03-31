@@ -21,7 +21,7 @@ $(document).ready(function(){
     
     
     var menu = $('.rm-nav').rMenu({
-        minWidth: '1000px'
+        minWidth: '990px'
     });
     
     $(".rm-toggle").bind("click", function() {

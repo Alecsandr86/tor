@@ -399,7 +399,7 @@ header{
 
 //examples
 .examples{
-  padding :51px 0;
+  padding: 51px 0 8px;
   h2{
     text-align :center;
     margin :0 0 58px;
@@ -496,10 +496,164 @@ header{
 //\examples\
 
 
+// application
+
+.application{
+  background-color :$color-text;
+  color :#fff;
+  padding :52px 0 42px;
+  strong{
+    font-size :rem(28);
+    display :inline-block;
+    vertical-align :middle;
+  }
+  form{
+    input{
+      border :1px solid $color-astsent;
+      background-color :transparent;
+      color :#fff;
+      padding :14px 15px;
+      width :270px;
+      margin: 0 15px 0 10px;
+      &.button{
+        background-color :$color-astsent;
+        -webkit-border-radius :0;
+        -moz-border-radius    :0;
+        border-radius         :0;
+        text-transform :none;
+        color :$color-text;
+        font-weight :normal;
+        margin :0;
+        float :right;
+      }
+      &:focus{
+        outline :none;
+      }
+    }
+  }
+  .row{
+    div{
+      padding :0;
+    }
+  }
+}
+
+
+// \application\
+
+
+
+// ransom
+
+.ransom{
+  p{
+    line-height :25px;
+  }
+ 
+}
+.titles-center{
+  text-align :center;
+  padding :36px 0;
+ 
+}
+.credo{
+  background-color :$color-astsent;
+  padding: 25px 39px;
+  min-height: 184px;
+  margin :0 0 30px;
+}
+
+.trust-us{
+  h5{
+    text-transform :uppercase;
+    padding-left: .9375rem;
+    padding-right: .9375rem;
+  }
+}
+
+.titles-h{
+  border-bottom :6px solid #e4e9ef;
+  display :block;
+  color :#e4e9ef;
+  font-size :rem(44);
+  font-weight :bold;
+  line-height :35px;
+}
 
 
 
 
+// \ransom\
+
+
+// footer
+
+footer{
+  background :#0f0f0f url('../images/footer-bg.jpg') 50% 0 no-repeat;
+  padding :58px 0 0;
+  margin :63px 0 0; 
+}
+.footer-content{
+  text-align :center;
+  color :#fff;
+  min-height: 208px;
+  strong{
+    font-size :rem(18);
+    text-transform :uppercase;
+  }
+  ul{
+    margin :0;
+  }
+  li{
+    margin :12px 0;
+  }
+}
+.footer-ico{
+  min-height :67px;
+}
+.footer-copy{
+  font-size :rem(13);
+  color :#fff;
+  padding: 12px 0;
+}
+.footer-soz{
+  text-align :center;
+  margin :10px 0;
+  ul{
+    
+  }
+  li{
+    display :inline-block;
+    vertical-align :middle;
+    margin :0 15px;
+  }
+  a{
+    display :inline-block;
+    vertical-align :middle;
+    opacity :0.7;
+    &:hover{
+      opacity :1;
+    }
+  }
+  
+}
+
+.buka{
+  color :#898989;
+  a{
+    color :#898989;
+    text-decoration :underline;
+    @include transition(all 0.5s $ease-out-cubic);
+    &:hover{
+      text-decoration :none;
+    }
+  }
+}
+
+
+
+
+// \footer\
 
 //************ ПЛАВНАЯ АНИМАЦИЯ ***********//
 //@include transition(all 0.5s $ease-out-cubic);
