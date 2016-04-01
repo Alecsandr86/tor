@@ -21,7 +21,7 @@ $(document).ready(function(){
     
     
     var menu = $('.rm-nav').rMenu({
-        minWidth: '990px'
+        minWidth: '993px'
     });
     
     $(".rm-toggle").bind("click", function() {
@@ -120,10 +120,43 @@ $(document).ready(function(){
      *   \Слайдер-Карусель Swiper\
      ********************************/
     
-    $('.immobilien-box .item').hoverIntent(makeTall,makeShort);
-    function makeTall(){$(this).addClass('active').animate({"height":'160','top':'-23px','marginBottom':'-23px' },300);}
-    function makeShort(){$(this).removeClass('active').animate({"height":'138','top':'0','marginBottom':'0'},300);}
-    
+ $('.footer-menu').bind('click',function(){
+     $(this).toggleClass('rm-active').next('ul').slideToggle();
+ })
+
+    /*******************************
+     *   ПЛАВНЫЙ ПЕРЕХОД ПО ЯКОРЯМ
+     *******************************/
+    $('a[href^="#nav"]').click(function(){
+        var target = $(this).attr('href');
+        $('html, body').animate({
+            scrollTop: $(target).offset().top},1000,"swing");
+        return false;
+    });
+
+    /*******************************
+     *   \ПЛАВНЫЙ ПЕРЕХОД ПО ЯКОРЯМ\
+     *******************************/
+
+
+    /*******************************
+     *          popapMagnific
+     *******************************/
+    $('.button-form .button').magnificPopup({
+        type: 'inline',
+        preloader: false,
+        closeOnBgClick: true,
+        showCloseBtn:false
+    });
+    $(document).on('click', '.popup-modal-dismiss', function (e) {
+        e.preventDefault();
+        $.magnificPopup.close();
+    });
+
+
+    /*******************************
+     *         \popapMagnific\
+     *******************************/
 });
 
 
@@ -132,10 +165,14 @@ $(window).bind("load resize",function() {
     var height = $(window).height();
     var width = $(window).width();
     
-    if(width <= 960){
-     
+    if(width > 992){
+        $('.immobilien-box .item').hoverIntent(makeTall,makeShort);
+        function makeTall(){$(this).addClass('active').animate({"height":'160','top':'-23px','marginBottom':'-23px' },300);}
+        function makeShort(){$(this).removeClass('active').animate({"height":'138','top':'0','marginBottom':'0'},300);}
     }else{
-        
+        $('.immobilien-box .item').hoverIntent(makeTall,makeShort);
+        function makeTall(){$(this).addClass('active');}
+        function makeShort(){$(this).removeClass('active');}
     }
 
 });

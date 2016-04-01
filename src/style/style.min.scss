@@ -298,6 +298,29 @@ header{
 
 
 
+
+.button-form{
+  text-align :center;
+  padding :10px 0 15px;
+  .button{
+    display :inline-block;
+    width: 95%;
+    padding :10px 0;
+    background-color: #f1c40f;
+    background-image: linear-gradient(to top, #f1c40f 0%, #ffde00 100%);
+    border: 1px solid #fedc01;
+    border-radius: 2px;
+    box-shadow: 0 5px 0 #d1a90b;
+    color: #333;
+    font-family: Tahoma;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+    text-transform: uppercase;
+    text-align :center;
+  }
+}
+
 /********************************
 *   \Слайдер-Карусель Swiper\
 ********************************/
@@ -316,7 +339,7 @@ header{
     width :33.333%;
     color :#fff;
     padding: 26px 9px 10px;
-    height :138px;
+    min-height :138px;
     bottom :0;
     @include transition(all 0.5s $ease-out-cubic);
     strong{
@@ -446,7 +469,7 @@ header{
       height :100%;
       position :absolute;
       top :0;
-      left :-30px;
+      left :-29px;
       background-color: #2a2a2a;
       display :inline-block;
     }
@@ -651,9 +674,101 @@ footer{
 }
 
 
+.footer-mobail{
+  background-color :#000;
+  .footer-menu{
+    padding :25px 30px;
+    border :none;
+  }
+  .hamburger-inner{
+    background-color :#fff;
+    &:before,
+    &:after{
+      background-color :#fff;
+    }
+  }
+  .hamburger-label{
+    color :#fff;
+  }
+  ul{
+    display :none;
+    background-color :#323232;
+    padding :10px 30px;
+  }
+  li{
+   &:last-child{
+     a{
+       border :none;
+     }
+   }
+  }
+  a{
+    font-size :rem(15);
+    color :#fff;
+    display :block;
+    border-bottom :1px dotted #fff;
+    padding :5px 0;
+  }
+}
+
 
 
 // \footer\
+
+// popap
+
+.popap-box{
+  display :none;
+}
+.mfp-bg{
+  opacity: 0.9;
+  background-color: #252528;
+}
+
+
+.form-popap{
+  .form-bond{
+    -webkit-border-radius :0;
+    -moz-border-radius    :0;
+    border-radius         :0;
+    background :none;
+    width :100%;
+    max-width :500px;
+    margin :0 auto;
+    padding :0;
+    form{
+      padding: 15px 0 0;
+    }
+    input{
+      padding :14px;
+      -webkit-border-radius :0;
+      -moz-border-radius    :0;
+      border-radius         :0;
+      background-color :transparent;
+      border :1px solid #fff;
+      color :#fff;
+      &:focus{
+        outline :none;
+      }
+      &.button{
+        background-color: #f1c40f;
+        border :none;
+        text-transform :none;
+        font-family: Tahoma;
+        font-size: 16px;
+        color :#000;
+        font-weight :normal;
+      }
+    }
+    strong{
+      font-size :rem(34);
+    }
+  }
+}
+
+
+// \popap\
+
 
 //************ ПЛАВНАЯ АНИМАЦИЯ ***********//
 //@include transition(all 0.5s $ease-out-cubic);

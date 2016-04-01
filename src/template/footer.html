@@ -1,6 +1,20 @@
     
         <footer>
-            <div class="footer-content">
+            <div class="footer-mobail hidden-lg-up">
+                <a href="#nav-footer" class="footer-menu hamburger hamburger--collapse">
+                      <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                      </span>
+                    <span class="hamburger-label">Меню</span>
+                </a>
+                <ul id="nav-footer">
+                    <li><a href="javascript: void(0);">Наши результаты</a></li>
+                    <li><a href="javascript: void(0);">Статьи</a></li>
+                    <li><a href="javascript: void(0);">О компании</a></li>
+                    <li><a href="javascript: void(0);">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-content hidden-md-down">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-3">
@@ -44,7 +58,7 @@
                     </div>
                 </div>
             </div>
-            <div class="footer-copy">
+            <div class="footer-copy hidden-md-down">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-4">
@@ -75,7 +89,21 @@
 
     </div>
 </div>
-    
+    <div class="popap-box">
+        <div id="form-popap" class="form-popap mfp-hide">
+            <div class="form-bond">
+                <strong>Заполните поля</strong>
+                <p>
+                    чтобы мы с вами связались
+                </p>
+                <form action="javascript: void(0);">
+                    <input type="text" placeholder="Ваше имя">
+                    <input type="tel" placeholder="Номер телефона *" required="">
+                    <input class="button popup-modal-dismiss" type="button" value="Решить проблему">
+                </form>
+            </div>
+        </div>
+    </div>
 <script src="js/main.js"></script>
 
     </body>

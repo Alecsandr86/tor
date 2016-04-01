@@ -23,6 +23,7 @@
     "normalize.sass": "^3.0.0",
     "jquery-responsive-menu": "^0.2.1",
     "css-hamburgers": "^0.4.0",
-    "jquery-hoverintent": "jquery-hoverIntent#^1.8.1"
+    "jquery-hoverintent": "jquery-hoverIntent#^1.8.1",
+    "magnific-popup": "^1.1.0"
   }
 }

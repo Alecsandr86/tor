@@ -1,3 +1,41 @@
+@media screen and(max-width: 1199px) {
+  .header-nav {
+    .nav-menu{
+      li{
+         a{
+           font-size :rem(14);
+           padding-right :rem(5);
+         }
+        &.rm-parent{
+          >a{
+            &:after{
+              right: -5px;
+            }
+          }
+        }
+       }
+      
+    } 
+  }
+
+  .result-box {
+    width: 100%;
+  }
+
+  .application {
+    form {
+      input {
+        width: 215px;
+      }
+    }
+  }
+  
+  .ransom{
+    img{
+      width :100%;
+    }
+  }
+}
 @media screen and(max-width: 1000px) {
   .nav-menu{
     >li{
@@ -8,7 +46,10 @@
   }
  
 } 
-@media screen and (max-width:991px){
+@media screen and (max-width:992px){
+  .header-nav {
+    padding: 10px 0 8px;
+  }
   .nav-menu{
     >li{
       background-color :#53799c;
@@ -16,6 +57,7 @@
       a{
         color :#fff!important;
         text-transform :uppercase;
+        padding :10px 30px;
       }
       &.rm-parent{
         a{
@@ -29,4 +71,143 @@
       border-bottom :none!important;
     }
   }
+  .wr-slider{
+    height :279px;
+  }
+  .cal{
+    left :13%;
+    top  :20px;
+    font-size :rem(46);
+  }
+  .phone-box{
+    width :auto;
+    p{
+      width :auto;
+    }
+  }
+  
+  .box-ico{
+    text-align :center;
+    margin-bottom :10px;
+  }
+
+  .immobilien-box{
+    .item {
+      min-height :200px;
+      strong{
+        font-size :rem(18);
+      }
+    }
+  }
+  .wir-empfehlen {
+    .item {
+      width: 60%;
+      margin: 0 auto;
+    }
+  
+  }
+  .result-box{
+    padding: 0 0 30px;
+    strong{
+      padding: 15px 30px;
+      &:before{
+        display :none;
+      }
+    }
+    li{
+      width :48%;
+      display :inline-block;
+    }
+  }
+
+  .application {
+    padding: 30px 0;
+    form {
+      input {
+        width: 100%;
+        margin :9px 0;
+        &.button{
+          margin :9px 0;
+        }
+      }
+   
+    }
+  }
+  .credo{
+    margin :30px 0;
+  }
+  
+  footer{
+    background-image :none;
+    padding :0;
+  }
+  
+}
+@media screen and (max-width:767px){
+
+  .container-fluid{
+    overflow :hidden;
+  }
+
+  .header-top {
+    padding: 12px 6px 5px;
+  }
+  
+  .phone-box{
+    p {
+      margin: 24px 0;
+    }
+  }
+  .swiper-button-next, 
+  .swiper-button-prev {
+    opacity: .3;
+  }
+
+  .cal {
+    top :50px;
+    font-size: rem(30);
+  }
+  .immobilien-box{
+    .item {
+      div{
+        padding :0;
+      }
+      strong{
+        font-size :rem(14);
+        text-align :center;
+        display :inline-block;
+      }
+      p{
+        font-size :rem(14);
+      }
+    }
+  }
+
+  .wir-empfehlen {
+    .item {
+      width: 100%;
+    }
+  }
+  .examples{
+    p,
+    h5{
+      padding :0 10px;
+    }
+  }
+  
+  .result-box {
+    li {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  .application {
+    padding: 30px 10px;
+  }
+  .ransom{
+    padding :0 10px;
+  }
+  
+  
 }
