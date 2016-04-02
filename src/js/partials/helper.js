@@ -32,7 +32,6 @@ $(document).ready(function(){
             
             
             if($('.wr-slider').parents().is('body')){
-                alert('ok');
                 $('.call').css({"display":"none"});
             }
             
@@ -216,7 +215,7 @@ $(window).bind("load resize",function() {
 
                     }
                 }, {
-                    offset: -200
+                    offset: -400
                 });
             // \кнопка наверх\
 
