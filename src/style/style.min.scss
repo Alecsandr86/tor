@@ -519,9 +519,9 @@ header{
 //\examples\
 
 
-// application
+// applic
 
-.application{
+.applic{
   background-color :$color-text;
   color :#fff;
   padding :52px 0 42px;
@@ -562,7 +562,7 @@ header{
 }
 
 
-// \application\
+// \applic\
 
 
 
@@ -604,9 +604,126 @@ header{
 }
 
 
-
-
 // \ransom\
+
+
+// title-pages
+
+.title-pages{
+  background-color :#3d4653;
+  padding :22px 0;
+  h1{
+    color :#fff;
+    margin :0;
+  }
+}
+
+
+// \title-pages\
+
+
+// nav-aside
+
+.nav-aside{
+  padding: 34px 0;
+  >ul{
+    >li{
+      margin :12px 0;
+      >a{
+        border :none;
+        background-color :#e9e8e0;
+        color :#60594e;
+        text-transform :uppercase;
+        font-size :rem(15);
+        position :relative;
+        -webkit-border-radius :3px;
+        -moz-border-radius    :3px;
+        border-radius         :3px;
+        @include transition(all 0.5s $ease-out-cubic);
+        &:hover{
+          background-color: #53799c;
+          color :#fff;
+        }
+      }
+      &.trigon{
+        >a{
+          &:after{
+            content :'';
+            border-top :7px solid #e9e8e0;
+            border-left :7px solid transparent;
+            border-right :7px solid transparent;
+            position :absolute;
+            bottom :-6px;
+            left :10px;
+            z-index :2;
+            @include transition(all 0.5s $ease-out-cubic);
+          }
+          &:hover{
+            &:after{
+              border-top-color :#53799c;
+            }
+          }
+        }
+      }
+    }
+  }
+  li{
+    
+  }
+  a{
+    padding :11px 17px;
+    font-size :rem(16);
+    color :$color-text;
+    border-bottom :1px dotted #60594e;
+    display :block;
+    @include transition(all 0.5s $ease-out-cubic);
+    &:hover{
+      color :#da940d;
+    }
+  }
+}
+
+// \nav-aside\
+
+// article-item
+
+
+.h4{
+  font-weight :bold;
+  font-family :Tahoma;
+  font-size :rem(20);
+  margin :20px 0 10px;
+  text-transform :uppercase;
+  margin: 44px 0 24px;
+}
+
+.number-list{
+  list-style :decimal;
+  padding :0 0 0 20px;
+  li{
+    padding :0 0 0 10px;
+  }
+  a{
+    text-decoration :underline;
+    &:hover{
+      text-decoration :none;
+    }
+  }
+  p{
+    font-size :rem(14);
+  }
+}
+
+
+
+// \article-item\
+
+
+
+
+
+
+
 
 
 // footer
@@ -677,7 +794,7 @@ footer{
 .footer-mobail{
   background-color :#000;
   .footer-menu{
-    padding :25px 30px;
+    padding :25px 15px;
     border :none;
   }
   .hamburger-inner{
@@ -691,8 +808,6 @@ footer{
     color :#fff;
   }
   ul{
-    display :none;
-    background-color :#323232;
     padding :10px 30px;
   }
   li{
@@ -711,9 +826,108 @@ footer{
   }
 }
 
+.list-footer{
+  background-color :#323232;
+  display :none;
+}
 
 
 // \footer\
+
+
+// button-up
+
+.button-up{
+  width: 80px;
+  height :100%;
+  background-color :#3d4653;
+  background-color :rgba(61, 70, 83, 0.1);
+  position :fixed;
+  top :0;
+  left :-100px;
+  text-align :center;
+  padding: 15px 0;
+  display :block;
+  i{
+    display :inline-block;
+    border-bottom :5px solid #53799c;
+    border-left :5px solid transparent;
+    border-right :5px solid transparent;
+    margin :0 3px 2px 0;
+  }
+  span{
+    font-family :Tahoma;
+    font-size :rem(13);
+    color :#53799c;
+  }
+}
+
+// \button-up\
+
+
+
+
+// application
+
+.application-box{
+  position :fixed;
+  z-index :999;
+  top :0;
+  right :-320px;
+  width: 320px;
+  height :100%;
+  background-color :#000;
+  background-color :rgba(0,0,0,0.8);
+  display :block;
+  .form-popap{
+    position :absolute;
+    width :100%;
+    top :50%;
+    bottom :50%;
+    margin-top :-50%;
+    padding :0 20px;
+    .form-bond{
+      width :100%;
+      max-width: 100%;
+    }
+  }
+}
+.application{
+  position :absolute;
+  top :50%;
+  bottom :50%;
+  margin-top :-20%;
+  left :-61px;
+  background-color :transparent;
+  display :inline-block;
+}
+
+// \application\
+
+// application-box-mobail
+
+.application-box-mobail{
+  display :block;
+  padding :10px;
+  text-align :center;
+  background-color :#f1c40f;
+  font-family :Tahoma;
+  font-weight :bold;
+  font-size :rem(18);
+  color :#000;
+  i{
+    vertical-align :middle;
+  }
+  span{
+    vertical-align :middle;
+  }
+}
+
+// \application-box-mobail\
+
+
+
+
 
 // popap
 
@@ -739,7 +953,8 @@ footer{
     form{
       padding: 15px 0 0;
     }
-    input{
+    input,
+    textarea{
       padding :14px;
       -webkit-border-radius :0;
       -moz-border-radius    :0;
@@ -759,6 +974,11 @@ footer{
         color :#000;
         font-weight :normal;
       }
+    }
+    textarea{
+      height :166px;
+      width :100%;
+      resize:none;
     }
     strong{
       font-size :rem(34);

@@ -21,7 +21,7 @@
 
 <div class="container-fluid">
     <div class="row">
-        <header>
+        <header id="l-header">
             <div class="header-top">
                 <div class="container">
                     <div class="row both">
@@ -340,7 +340,7 @@
                 </div>
             </div>
         </section>
-        <section class="application">
+        <section class="applic">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3">
@@ -448,18 +448,30 @@
     
         <footer>
             <div class="footer-mobail hidden-lg-up">
-                <a href="#nav-footer" class="footer-menu hamburger hamburger--collapse">
-                      <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                      </span>
-                    <span class="hamburger-label">Меню</span>
-                </a>
-                <ul id="nav-footer">
-                    <li><a href="javascript: void(0);">Наши результаты</a></li>
-                    <li><a href="javascript: void(0);">Статьи</a></li>
-                    <li><a href="javascript: void(0);">О компании</a></li>
-                    <li><a href="javascript: void(0);">Контакты</a></li>
-                </ul>
+                <div class="container">
+                    <div class="row">
+                        <a href="#nav-footer" class="footer-menu hamburger hamburger--collapse">
+                          <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                          </span>
+                          <span class="hamburger-label">Меню</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="list-footer">
+                    <div class="container">
+                        <div class="row">
+                            <ul id="nav-footer">
+                                <li><a href="javascript: void(0);">Наши результаты</a></li>
+                                <li><a href="javascript: void(0);">Статьи</a></li>
+                                <li><a href="javascript: void(0);">О компании</a></li>
+                                <li><a href="javascript: void(0);">Контакты</a></li>
+                            </ul>
+                        </div>
+                    </div>  
+                </div>
+                
+               
             </div>
             <div class="footer-content hidden-md-down">
                 <div class="container">
@@ -533,7 +545,33 @@
                 </div>
             </div>
         </footer>
-
+        <a href="#l-header" class="button-up">
+            <span><i></i>Наверх</span>
+        </a>
+        
+        <div class="call">
+            <a class="application-box-mobail popap-button hidden-lg-up" href="#form-popap-two" >
+                <i class="application-mob"></i> <span>Онлайн заявка</span>
+            </a>
+            <div class="application-box">
+                <a class="application" href="javascript: void(0);"></a>
+                <div class="form-popap">
+                    <div class="form-bond">
+                        <strong>Заполните поля</strong>
+                        <p>
+                            чтобы мы с вами связались
+                        </p>
+                        <form action="javascript: void(0);">
+                            <input type="text" placeholder="Ваше имя">
+                            <input type="tel" placeholder="Номер телефона *" required="">
+                            <textarea placeholder="Комментарии"></textarea>
+                            <input class="button popup-modal-dismiss" type="button" value="Решить проблему">
+                        </form>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        
     </div>
 </div>
     <div class="popap-box">
@@ -546,6 +584,20 @@
                 <form action="javascript: void(0);">
                     <input type="text" placeholder="Ваше имя">
                     <input type="tel" placeholder="Номер телефона *" required="">
+                    <input class="button popup-modal-dismiss" type="button" value="Решить проблему">
+                </form>
+            </div>
+        </div>
+        <div id="form-popap-two" class="form-popap mfp-hide">
+            <div class="form-bond">
+                <strong>Заполните поля</strong>
+                <p>
+                    чтобы мы с вами связались
+                </p>
+                <form action="javascript: void(0);">
+                    <input type="text" placeholder="Ваше имя">
+                    <input type="tel" placeholder="Номер телефона *" required="">
+                    <textarea placeholder="Комментарии"></textarea>
                     <input class="button popup-modal-dismiss" type="button" value="Решить проблему">
                 </form>
             </div>
