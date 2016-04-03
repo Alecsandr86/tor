@@ -35,6 +35,10 @@ $(document).ready(function(){
                 $('.call').css({"display":"none"});
             }
             
+           
+            if($("footer").prev(".contacts")){
+                $("footer").css({"margin":"0"})
+            }
 
         });
 

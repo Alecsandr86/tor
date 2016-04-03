@@ -216,5 +216,19 @@
   }
   
   
-  
+}
+
+@media screen and (max-width:420px){
+  .list-adress{
+    b{
+      display :block;
+      margin :0 0 3px;
+    }
+  }
+  .feedback-form{
+    h4{
+      font-size :rem(22);
+      text-align :center;
+    }
+  }
 }

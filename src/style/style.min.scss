@@ -548,6 +548,13 @@ header{
         font-weight :normal;
         margin :0;
         float :right;
+        &.blue{
+          background-color: #53799c;
+          color :#fff;  
+          &:hover{
+            background-color: lighten(#53799c,10%);
+          }
+        }
       }
       &:focus{
         outline :none;
@@ -561,7 +568,15 @@ header{
   }
 }
 
-
+.button{
+  &.blue{
+    background-color: #53799c;
+    color :#fff;
+    &:hover{
+      background-color: lighten(#53799c,10%);
+    }
+  }
+}
 // \applic\
 
 
@@ -718,6 +733,51 @@ header{
 
 // \article-item\
 
+
+// contacts
+
+.contacts{
+  padding :45px 0 0;
+}
+
+.list-adress{
+  li{
+    margin :0 0 16px;
+  }
+  b{
+    font-family :$tahoma;
+    font-weight :bold;
+  }
+}
+
+.feedback-form{
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding :23px;
+  h4{
+    margin :0 0 16px;
+  }
+  input,
+  textarea{
+    width :100%;
+    border-radius: 2px;
+    border :none;
+    padding :16px;
+    margin :7px 0;
+    font-size :rem(14);
+    color: #6c6c6c;
+  }
+  textarea{
+    resize:none;
+    min-height :172px;
+  }
+}
+
+.map{
+  margin :70px 0 0;
+}
+
+// \contacts\
 
 
 
