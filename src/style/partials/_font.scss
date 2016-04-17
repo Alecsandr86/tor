@@ -12,9 +12,4 @@ body{
   font-family: $tahoma;
 }
 
-
-@include font-face("pt_sansregular", "../fonts/PT_Sans");
-@include font-face("pt_sansbold", "../fonts/PT_Sans_Bold");
-
-$ff-ptr :"pt_sansregular";
-$ff-ptb :"pt_sansbold";
+$ff-ptr :'PT Sans', sans-serif;

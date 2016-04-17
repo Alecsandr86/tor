@@ -6,8 +6,29 @@
     <title>TITLE</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="css/style.min.css">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <style>
+        .loader-box{
+            position :fixed;
+            top :0;
+            left :0;
+            right :0;
+            bottom :0;
+            width :100%;
+            background-color :#fff;
+            z-index :9999;
+        }
+        .loader{
+            position :absolute;
+            top :50%;
+            left :50%;
+            margin :-32px 0 0 -32px;
+            fill:#ffce07;
+        }
+    </style>
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -15,9 +36,13 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    
 </head>
 <body>
+
+<div class="loader-box">
+    <img class="loader" src="images/loading-spinning-bubbles.svg" alt="loader">
+</div>
 
 <div class="container-fluid">
     <div class="row">
@@ -71,7 +96,7 @@
                                             <li><a href="javascript: void(0);">коммерческой недвижимости</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="javascript: void(0);">Займы под залог</a></li>
+                                    <li class="hidden-md-down"><a href="javascript: void(0);">Займы под залог</a></li>
                                     <li>
                                         <a href="javascript: void(0);">Продажа недвижимости</a>
                                         <ul>
@@ -81,11 +106,12 @@
                                             <li><a href="javascript: void(0);">коммерческой недвижимости</a></li>
                                         </ul>
                                     </li>
+                                    <li class="hidden-lg-up"><a href="javascript: void(0);">Займы под залог</a></li>
                                     <li><a href="javascript: void(0);">Иные услуги</a></li>
-                                    <li><a href="javascript: void(0);">Наши результаты</a></li>
-                                    <li><a href="javascript: void(0);">Статьи</a></li>
-                                    <li><a href="javascript: void(0);">О компании</a></li>
-                                    <li><a href="javascript: void(0);">Контакты</a></li>
+                                    <li class="hidden-md-down"><a href="javascript: void(0);">Наши результаты</a></li>
+                                    <li class="hidden-md-down"><a href="javascript: void(0);">Статьи</a></li>
+                                    <li class="hidden-md-down"><a href="javascript: void(0);">О компании</a></li>
+                                    <li class="hidden-md-down"><a href="javascript: void(0);">Контакты</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -99,27 +125,32 @@
            <div class="swiper-container swiper">
                    <div class="swiper-wrapper">
                        <div class="swiper-slide">
-                           <div class="container">
-                               <strong class="cal">
-                                   <span>Выкуп </span> <br>
-                                   <span>недвижимости </span> <br>
-                                   <span>со скидкой </span> <br>
-                                   <span>от 10%</span>
-                               </strong>
+                           <div class="wr-cal">
+                               <div class="container">
+                                   <strong class="cal">
+                                       <span>Выкуп </span> <br>
+                                       <span>недвижимости </span> <br>
+                                       <span>со скидкой </span> <br>
+                                       <span>от 10%</span>
+                                   </strong>
+                               </div>
+
                            </div>
-                           <img class="hidden-md-down" src="images/slider_01.jpg" alt="img">
-                           <img class="hidden-lg-up" src="images/slid-item-1.jpg" alt="img">
+                           <img class="hidden-xs-down" src="images/slider_01.jpg" alt="img">
+                           <img class="hidden-sm-up" src="images/slid-item-1.jpg" alt="img">
                        </div>
                        <div class="swiper-slide">
-                           <div class="container">
-                               <strong class="cal">
-                                   <span>Продажа</span> <br>
-                                   <span>объекта</span> <br>
-                                   <span>за 30 дней</span>
-                               </strong>
+                           <div class="wr-cal">
+                               <div class="container">
+                                   <strong class="cal">
+                                       <span>Продажа</span> <br>
+                                       <span>объекта</span> <br>
+                                       <span>за 30 дней</span>
+                                   </strong>
+                               </div>
                            </div>
-                           <img class="hidden-md-down" src="images/slider_01.jpg" alt="img">
-                           <img class="hidden-lg-up" src="images/slid-item-1.jpg" alt="img">
+                           <img class="hidden-xs-down" src="images/slider_01.jpg" alt="img">
+                           <img class="hidden-sm-up" src="images/slid-item-1.jpg" alt="img">
                        </div>
                    </div>
                    <div class="form-posiz hidden-md-down">

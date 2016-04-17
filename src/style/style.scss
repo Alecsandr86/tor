@@ -1,9 +1,10 @@
 @import "partials/path";
 @import "partials/font";
 @import "partials/print";
-@import "../../bower_components/Swiper/dist/css/swiper.min.css";
-@import "../../bower_components/animate.css/animate.min.css";
+
 /////////////////////////////////////
+
+
 
 // HEADER
 header{
@@ -39,12 +40,6 @@ header{
     
   }
 }
-
-
-
-
-
-
 .header-nav{
   background-color :#f1f1f1;
   padding: 13px 0 10px;
@@ -53,6 +48,7 @@ header{
       a{
         font-size :rem(15);
         @include transition(color 0.5s $ease-out-cubic);
+        padding-right :rem(26);
       }
       &.rm-parent{
         >a{
@@ -97,7 +93,6 @@ header{
   }
   
 }
-
 .hamburger-label{
   display :inline-block;
   vertical-align :top;
@@ -116,13 +111,10 @@ header{
   width: 100%;
 
 }
-
 .swiper-slide{
   position: relative;
   overflow: hidden;
 }
-
-
 .slider{
   width: 100%;
   height: 250px;
@@ -148,24 +140,32 @@ header{
     align-items: center;
   }
 }
-
-
 .wr-slider{
   position :relative;
-  background-color :#096a96;
-  height: 424px;
+  //background-color :#096a96;
+  //min-height: 333px;
+  margin :0 0 -4px;
+  img{
+    width :100%;
+    height :100%;
+    min-height: 333px;
+  }
   .container{
     position :relative;
     z-index :2;
   }
-.form-posiz{
-  position :absolute;
-  top :0;
-  left :0;
-  right :0;
+  .form-posiz{
+    position :absolute;
+    width :100%;
+    height :100%;
+    top :0;
+    left :0;
+    right :0;
+    .container{
+      height :100%;
+    }
+  }
 }
-}
-
 .swiper-button-prev,
 .swiper-button-next{
   display :inline-block;
@@ -183,12 +183,27 @@ header{
   position :relative;
   overflow :hidden;
   text-align :center;
-  
+  .container{
+    height :100%;
+    top :0;
+  }
+}
+.wr-cal{
+  position :absolute;
+  top :50%;
+  left :0;
+  right :0;
+  bottom :50%;
+  width :100%;
+  height :100%;
+  margin-top :-150px;
 }
 .cal{
   position :absolute;
-  top :113px;
+  top :0;
+  bottom :0;
   left :20px;
+  height :300px;
   color :#fff;
   font-size :rem(48);
   text-align :left;
@@ -230,12 +245,13 @@ header{
   
  
 }
-
+.swiper-wrapper{
+  height :100%;
+}
 .text{
   -webkit-animation-duration: 1.5s;
   -webkit-animation-delay: 0.1s;
 }
-
 .form-bond{
   width :370px;
   background-color :#000;
@@ -244,13 +260,17 @@ header{
   -moz-border-radius    :5px;
   border-radius         :5px;
   color :#fff;
-  padding: 21px 35px;
+  padding: 21px 35px 10px;
   &.posiz{
     position :absolute;
-    top :59px;
+    top :50%;
+    bottom :50%;
+    margin-top :-150px;
     right :0;
     z-index :9;
+    height :300px;
   }
+
   strong{
     font-size :rem(26);
   }
@@ -275,7 +295,6 @@ header{
     }
   }
 }
-
 .button{
   border :none;
   background-color : darken($color-astsent,4.2%);
@@ -295,10 +314,6 @@ header{
     background-color : lighten($color-astsent,4.2%);
   }
 }
-
-
-
-
 .button-form{
   text-align :center;
   padding :10px 0 15px;
@@ -400,8 +415,6 @@ header{
   }
  
 }
-
-
 .kreis{
   width: 123px;
   height: 123px;
@@ -520,7 +533,6 @@ header{
 
 
 // applic
-
 .applic{
   background-color :$color-text;
   color :#fff;
@@ -567,7 +579,6 @@ header{
     }
   }
 }
-
 .button{
   &.blue{
     background-color: #53799c;
@@ -600,15 +611,14 @@ header{
   min-height: 184px;
   margin :0 0 30px;
 }
-
 .trust-us{
   h5{
     text-transform :uppercase;
     padding-left: .9375rem;
     padding-right: .9375rem;
+    margin :39px 0;
   }
 }
-
 .titles-h{
   border-bottom :6px solid #e4e9ef;
   display :block;
@@ -633,7 +643,6 @@ header{
   }
 }
 
-
 // \title-pages\
 
 
@@ -642,6 +651,7 @@ header{
 .nav-aside{
   padding: 34px 0;
   >ul{
+   
     >li{
       margin :12px 0;
       >a{
@@ -682,6 +692,19 @@ header{
       }
     }
   }
+  ul{
+    ul{
+      li{
+        &:last-child{
+          a{
+            border :none;
+          }
+        }
+      }
+    }
+   
+    
+  }
   li{
     
   }
@@ -702,7 +725,6 @@ header{
 
 // article-item
 
-
 .h4{
   font-weight :bold;
   font-family :Tahoma;
@@ -711,7 +733,6 @@ header{
   text-transform :uppercase;
   margin: 44px 0 24px;
 }
-
 .number-list{
   list-style :decimal;
   padding :0 0 0 20px;
@@ -729,8 +750,6 @@ header{
   }
 }
 
-
-
 // \article-item\
 
 
@@ -739,7 +758,6 @@ header{
 .contacts{
   padding :45px 0 0;
 }
-
 .list-adress{
   li{
     margin :0 0 16px;
@@ -749,7 +767,6 @@ header{
     font-weight :bold;
   }
 }
-
 .feedback-form{
   background-color: #f1f1f1;
   border-radius: 5px;
@@ -772,7 +789,6 @@ header{
     min-height :172px;
   }
 }
-
 .map{
   margin :70px 0 0;
 }
@@ -785,11 +801,9 @@ header{
 .examples-box{
   
 }
-
 .box-examples{
   padding :44px 0;
 }
-
 .examp-item{
   text-align :left;
   margin :0 0 25px;
@@ -805,7 +819,6 @@ header{
     padding :0 20px 0 0;
   }
 }
-
 .h2-cast{
   font-size :rem(30);
   color :#47474d;
@@ -853,7 +866,36 @@ cite{
 // \service-box\
 
 
-
+// bread-crumbs
+.bread-crumbs{
+  ul{
+    padding: 9px 1px;
+    li{
+      background :url('../images/bread-crumbs.png') 100% 5px no-repeat;
+      padding :0 15px 0 0;
+      display :inline-block;
+      &:last-child{
+        background-image :none;
+        a{
+          text-decoration :none;
+          cursor :default;
+        }
+      }
+    }
+    a{
+      display :inline-block;
+      font-family :Tahoma;
+      font-size :rem(12);
+      color :#3d4653;
+      text-decoration :underline;
+      &:hover{
+        text-decoration :none;
+      }
+    }
+  }
+ 
+}
+//\bread-crumbs\
 
 
 
@@ -924,7 +966,6 @@ footer{
   }
   
 }
-
 .buka{
   color :#898989;
   a{
@@ -936,8 +977,6 @@ footer{
     }
   }
 }
-
-
 .footer-mobail{
   background-color :#000;
   .footer-menu{
@@ -972,7 +1011,6 @@ footer{
     padding :5px 0;
   }
 }
-
 .list-footer{
   background-color :#323232;
   display :none;
@@ -1061,6 +1099,10 @@ footer{
   font-weight :bold;
   font-size :rem(18);
   color :#000;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   i{
     vertical-align :middle;
   }
@@ -1074,7 +1116,6 @@ footer{
 
 
 
-
 // popap
 
 .popap-box{
@@ -1084,8 +1125,6 @@ footer{
   opacity: 0.9;
   background-color: #252528;
 }
-
-
 .form-popap{
   .form-bond{
     -webkit-border-radius :0;
@@ -1131,7 +1170,6 @@ footer{
     }
   }
 }
-
 
 // \popap\
 

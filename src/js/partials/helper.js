@@ -4,7 +4,7 @@ $(document).ready(function(){
      *          mailScript
      *******************************/
     
-        $(function(){
+     $(function(){
             var nav = $('.nav-aside ul li ul');
             if ( nav.is("ul") ) {
                 nav.parent('li').addClass('trigon')
@@ -33,11 +33,12 @@ $(document).ready(function(){
             
             if($('.wr-slider').parents().is('body')){
                 $('.call').css({"display":"none"});
+                $('footer').css({"marginBottom":"0"})
             }
             
            
-            if($("footer").prev(".contacts")){
-                $("footer").css({"margin":"0"})
+            if($(".contacts").next("footer").parents().is("body")){
+                $("footer").css({"margin":"0"});
             }
 
         });
@@ -160,11 +161,8 @@ $(document).ready(function(){
     /*******************************
      *         \popapMagnific\
      *******************************/
-
-    
     
 });
-
 
 $(window).bind("load resize",function() {
 
@@ -177,15 +175,25 @@ $(window).bind("load resize",function() {
     $(function(){
         if(width > 992){
 
-            $('.immobilien-box .item').hoverIntent(makeTall,makeShort);
-            function makeTall(){$(this).addClass('active').animate({"height":'160','top':'-23px','marginBottom':'-23px' },300);}
-            function makeShort(){$(this).removeClass('active').animate({"height":'138','top':'0','marginBottom':'0'},300);}
+            $('.immobilien-box .item').bind({
+                mouseenter :function(e){
+                    $(this).addClass('active').animate({"height":'160','top':'-23px','marginBottom':'-23px' },300);
+                },
+                mouseleave : function(e){
+                    $(this).removeClass('active').animate({"height":'138','top':'0','marginBottom':'0'},300);
+                }
+            });
 
         }else{
 
-            $('.immobilien-box .item').hoverIntent(makeTall,makeShort);
-            function makeTall(){$(this).addClass('active');}
-            function makeShort(){$(this).removeClass('active');}
+            $('.immobilien-box .item').bind({
+                mouseenter :function(e){
+                    $(this).addClass('active');
+                },
+                mouseleave : function(e){
+                    $(this).removeClass('active');
+                }
+            });
 
 
         }
@@ -201,7 +209,6 @@ $(window).bind("load resize",function() {
 
     var buttonUp = $('.button-up');
     var boxApplication = $(".application");
-    
     $(function(){
         if(width > 992){
             buttonUp.css({'display':'block'});
@@ -247,4 +254,11 @@ $(window).bind("load resize",function() {
      *******************************/
     
     
+});
+
+$(function(){
+    $('.loader-box,.loader').fadeIn(10); //показывает фон и индикатор
+    $(window).load(function() {
+        $('.loader-box,.loader').fadeOut(1000); //скрывает, после загрузки страницы
+    });
 });

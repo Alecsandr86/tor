@@ -25,7 +25,7 @@ var path = {
     src: {
         html: 'src/*.html',
         js: 'src/js/script.js',
-        style: 'src/style/style.min.scss',
+        style: 'src/style/style.scss',
         img: 'src/images/*.*',
         fonts: 'src/fonts/**/*.*'
     },
@@ -74,10 +74,10 @@ gulp.task('js:build', function () {
         .pipe(reload({stream: true}));
 });
 
-//gulp.task('script', function () {
-//    gulp.src('./src/js/partials/*.js')
-//        .pipe(gulp.dest(path.build.js))
-//});
+gulp.task('script', function () {
+    gulp.src('./src/js/partials/*.js')
+        .pipe(gulp.dest(path.build.js))
+});
 
 //gulp.task('fincss', function(){
 //    gulp.src('./src/*.css')
@@ -92,12 +92,12 @@ gulp.task('style:build', function () {
         .pipe(sourcemaps.init())
         .pipe(sass({
             includePaths: ['src/style/'],
-            outputStyle: 'compressed',
+            //outputStyle: 'compressed',
             sourceMap: true,
             errLogToConsole: true
         }))
         .pipe(prefixer())
-        .pipe(cssmin())
+        //.pipe(cssmin())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({stream: true}));

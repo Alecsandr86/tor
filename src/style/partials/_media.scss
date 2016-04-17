@@ -17,11 +17,9 @@
       
     } 
   }
-
   .result-box {
     width: 100%;
   }
-
   .applic {
     form {
       input {
@@ -29,7 +27,6 @@
       }
     }
   }
-  
   .ransom{
     img{
       width :100%;
@@ -44,7 +41,6 @@
       }
     }
   }
- 
 } 
 @media screen and (max-width:992px){
   
@@ -81,7 +77,6 @@
   .box-examples{
     padding :15px 0;
   }
-  
   .header-nav {
     padding: 10px 0 8px;
   }
@@ -107,12 +102,20 @@
     }
   }
   .wr-slider{
-    height :279px;
+    height :100%;
+    img{
+      width: 100%;
+      min-height :100%;
+    }
   }
-  .cal{
-    left :13%;
-    top  :20px;
-    font-size :rem(46);
+  .cal {
+    top: 25px;
+    margin :0;
+    bottom :auto;
+    font-size :rem(24);
+  }
+  .wr-cal{
+    margin-top:-100px;
   }
   .phone-box{
     width :auto;
@@ -120,12 +123,10 @@
       width :auto;
     }
   }
-  
   .box-ico{
     text-align :center;
     margin-bottom :10px;
   }
-
   .immobilien-box{
     .item {
       min-height :200px;
@@ -154,7 +155,6 @@
       display :inline-block;
     }
   }
-
   .applic {
     padding: 30px 0;
     form {
@@ -171,10 +171,10 @@
   .credo{
     margin :30px 0;
   }
-  
   footer{
     background-image :none;
     padding :0;
+    margin: 63px 0 56px;
   }
   
 }
@@ -183,11 +183,9 @@
   .container-fluid{
     overflow :hidden;
   }
-
   .header-top {
     padding: 12px 6px 5px;
   }
-  
   .phone-box{
     p {
       margin: 24px 0;
@@ -197,10 +195,9 @@
   .swiper-button-prev {
     opacity: .3;
   }
-
   .cal {
-    top :50px;
-    font-size: rem(30);
+    //top :50px;
+    //font-size: rem(30);
   }
   .immobilien-box{
     .item {
@@ -217,7 +214,6 @@
       }
     }
   }
-
   .wir-empfehlen {
     .item {
       width: 100%;
@@ -229,21 +225,18 @@
       padding :0 10px;
     }
   }
-  
   .result-box {
     li {
       width: 100%;
       display: block;
     }
   }
-
   .applic {
     padding: 30px 10px;
   }
   .ransom{
     padding :0 10px;
   }
-
   .title-pages {
     h1{
       padding :0 0 0 15px;
@@ -251,6 +244,13 @@
   }
   
   
+}
+@media screen and (max-width:543px){
+  .cal {
+    top: 25px;
+    margin :0;
+    bottom :auto;
+  }
 }
 
 @media screen and (max-width:420px){
@@ -264,6 +264,16 @@
     h4{
       font-size :rem(22);
       text-align :center;
+    }
+  }
+  .cal {
+    //top: 25px;
+    //font-size :rem(26);
+  }
+  .wr-slider{
+    height :160px;
+    img{
+      height :160px;
     }
   }
 }
